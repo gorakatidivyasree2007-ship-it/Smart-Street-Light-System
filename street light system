@@ -1,0 +1,11 @@
+int ldr = A0, light = 9;
+
+void setup() {
+  pinMode(light, OUTPUT);
+}
+
+void loop() {
+  int value = analogRead(ldr);
+  digitalWrite(light, value < 400 ? HIGH : LOW);
+  delay(200);
+}
